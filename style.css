@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container h3 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 40px;
+}
+
+.gameboard {
+    display: grid;
+    width: 100%;
+    height: 400px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tile {
+    width: 100%;
+    height: same-as-width;
+}
+
+.tile1 {
+    grid-column: 1;
+    background: red;
+}
+
+.tile2 {
+    grid-column: 2;
+    background: blue;
+}
+
+.tile3 {
+    grid-column: 3;
+    background: yellow;
+}
+
+.tile4 {
+    grid-column: 1;
+    background: red;
+}
+
+.tile5 {
+    grid-column: 2;
+    background: yellow;
+}
+
+.tile6 {
+    grid-column: 3;
+    background: blue;
+}
+
+.cover-tile1 {
+    grid-column: 1;
+    background: lightblue;
+}
+
+.cover-tile2 {
+    grid-column: 2;
+    background: lightblue;
+}
+
+.cover-tile3 {
+    grid-column: 3;
+    background: lightblue;
+}
+
+.cover-tile4 {
+    grid-column: 1;
+    background: lightblue;
+}
+
+.cover-tile5 {
+    grid-column: 2;
+    background: lightblue;
+}
+
+.cover-tile6 {
+    grid-column: 3;
+    background: lightblue;
+}
+
+.coverboard {
+    margin-top: -400px;
+}
+
+.cover-tile {
+    border: 1px solid black;
+}
+
+.cover-tile1,
+.cover-tile2,
+.cover-tile3 {
+    border-bottom: none;
+}
