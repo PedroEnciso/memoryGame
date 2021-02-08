@@ -5,20 +5,6 @@ let firstChoiceColor, secondChoiceColor
 let score = 0;
 let failedAttempts = 0;
 
-
-/*
-document.addEventListener('click', function(clickedBox) {
-    clickedBox.target.style.opacity = "0";
-
-    if (numberofClicks = 0) {firstChoice = clickedBox.target.innerHTML;}
-
-    console.log(firstChoice);
-
-
-
-})
-*/
-
 function flipTile(clickedTileId) {
     if (numberOfClicks == 0) {
         //flips the tile
@@ -50,17 +36,27 @@ function getTileColor(tileId) {
     return tileColor;
 }
 
+
+let attemptsHtml = document.getElementById("attempts");
+let scoreHtml = document.getElementById('score');
+
 function checkIfElementsAreEqual() {
     if(firstChoiceColor === secondChoiceColor) {
         setTimeout(function() {
             score++;
-            alert('yes');
+            scoreHtml.innerHTML = score;
+            if (score == 3) {
+                alert("You won the game! \nRefresh to play again.")
+            }
         },750)
     }
     else {
         setTimeout(function() {
             failedAttempts++;
-            alert('no');
+            alert('Sorry, these tiles do not match!');
+            firstChoice.style.opacity = '1';
+            secondChoice.style.opacity = '1';
+            attemptsHtml.innerHTML = failedAttempts;
         },750)
         
     }
